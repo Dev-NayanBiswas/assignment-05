@@ -1,0 +1,15 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "JetBrains Mono", Courier, monospace;
+}
+body {
+  height: 100%;
+  width: 100%;
+  min-block-size: 100dvh;
+  background: black;
+  color: bisque;
+}

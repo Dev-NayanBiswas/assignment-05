@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./index.js" defer></script>
+    <script src="https://cdn.lordicon.com/lordicon.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style type="text/tailwindcss">
+        @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+
+        @layer components {
+          body{
+            font-family: "Lexend", sans-serif;
+            background: #fffefe;
+            position: relative;
+            height: 100dvh;
+          }
+
+          .record:nth-child(odd){
+            @apply bg-green-50
+          }
+          .record:nth-child(even){
+            @apply bg-gray-50
+          }
+          .btn__primary{
+            @apply py-2 px-10 bg-[#b4f461d9] text-gray-800 font-semibold tracking-wide rounded-md hover:text-gray-100 focus:text-gray-100 focus:bg-lime-600 hover:bg-lime-600 active:scale-95 active:translate-x-[2px] active:translate-y-[2px] transition-all duration-300
+          }
+          .default_image{
+            @apply w-full h-full object-cover object-center hover:scale-105 transition-all duration-300 
+          }
+
+          .default_input{
+            @apply min-h-[7vh] pl-5 bg-gray-50 border-[1px] border-solid rounded-lg md:text-xl text-sm tracking-wide placeholder:italic focus:outline-none text-gray-900 focus:border-red-300
+          }
+        }
+      </style>
+</head>
+<body class="relative">
+    <header class="fixed left-0 right-0 z-20 bg-gradient-to-b from-[#bcc1c3f4]">
+        <!--! nav Starts -->
+        <div class="py-4">
+            <nav class="grid grid-cols-3 gap-10 md:w-9/12 w-full mx-auto">
+                <div class="navPartOne flex items-center md:pl-0 pl-2">
+                    <button class="btn__primary" onclick="window.location.href='./index.html'">Home</button>
+                </div>
+                <div class="navPartTwo flex gap-3 items-center justify-center col-span-3 row-start-1 md:col-span-1 md:col-start-2">
+                    <img src="./assets/logo.png" alt="">
+                    <p class="font-bold text-2xl text-gray-800 whitespace-nowrap">Donate Bangladesh</p>
+                </div>
+                <div class="navbarPartThree col-start-3">
+                    <div class="flex items-center gap-1 justify-end md:pr-0 pr-2">
+                        <p>
+                            <lord-icon
+                            src="https://media.lordicon.com/icons/wired/lineal/299-coins-dollar.json"
+                            trigger="hover"
+                            stroke="light"
+                            state="hover-roll"
+                            colors="primary:#000,secondary:#ffd700"
+                            style="width:50px;height:50px">
+                        </lord-icon>
+                        </p>
+                        <div class="whitespace-nowrap ">
+                            <span class="totalAmount font-bold text-xl text-gray-800">10000</span>
+                            <span class="font-bold text-xl text-gray-500">BDT</span>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <!--! nav Ends -->
+    </header>
+</body>
+</html>
