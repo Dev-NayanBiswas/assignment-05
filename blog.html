@@ -27,17 +27,22 @@
             opacity: 0;
             z-index: -10;
           }
-
+          .question:nth-child(odd){
+            @apply bg-green-50 shadow-sm 
+          }
+          .question:nth-child(even){
+            @apply bg-lime-50 shadow-sm
+          }
           .btn__primary{
             @apply py-2 px-10 bg-[#b4f461d9] text-gray-800 font-semibold tracking-wide rounded-md hover:text-gray-100 focus:text-gray-100 focus:bg-lime-600 hover:bg-lime-600 active:scale-95 active:translate-x-[2px] active:translate-y-[2px] transition-all duration-300
           }
 
           .question{
-            @apply border-[1px] border-solid min-h-10 rounded-md flex items-center px-6 cursor-pointer hover:bg-green-200 active:scale-[0.99] transition-all duration-300
+            @apply border-[1px] border-solid min-h-10 rounded-md flex items-center md:px-5 md:py-2 p-2 py-1 cursor-pointer hover:bg-green-200 active:scale-[0.99] transition-all duration-300
           }
 
           .view{
-            @apply bg-gray-100 text-xl italic font-semibold w-9/12 mx-auto translate-y-[10px] my-10 transition-all duration-500
+            @apply bg-gray-100 text-xl italic font-semibold w-9/12 mx-auto translate-y-[10px] my-10 transition-all duration-500 shadow-lg
           }
         }
       </style>
@@ -75,22 +80,22 @@
     <main class="relative">
       <div class="h-[30vh]"></div>
       <section class="card_container w-9/12 mx-auto space-y-3">
-        <div class="question1 question">
-          <button class="text-2xl font-bold italic text-gray-700 tracking-wide w-full text-left">What is the Document Object Model (DOM)?</button>
+        <div class="question1 question ">
+          <button class="md:text-2xl text-[1rem] font-bold italic text-gray-700 tracking-wide w-full text-left">What is the Document Object Model (DOM)?</button>
         </div>
         <div class="question2 question">
-          <button class="text-2xl font-bold italic text-gray-700 tracking-wide w-full text-left">How do you select an element from the DOM?</button>
+          <button class="md:text-2xl ttext-[1rem] font-bold italic text-gray-700 tracking-wide w-full text-left">How do you select an element from the DOM?</button>
         </div>
         <div class="question3 question">
-          <button class="text-2xl font-bold italic text-gray-700 tracking-wide w-full text-left">What is event delegation in the context of the DOM, and why is it useful?</button>
+          <button class="md:text-2xl text-[1rem] font-bold italic text-gray-700 tracking-wide w-full text-left">What is event delegation in the context of the DOM, and why is it useful?</button>
         </div>
         <div class="question4 question">
-          <button class="text-2xl font-bold italic text-gray-700 tracking-wide w-full text-left">How do you manipulate an element's attributes and styles using the DOM?</button>
+          <button class="md:text-2xl text-[1rem] font-bold italic text-gray-700 tracking-wide w-full text-left">How do you manipulate an element's attributes and styles using the DOM?</button>
         </div>
       </section>
       <section class="answer_sheet">
         <article class="hide one">
-          <div class="p-6">
+          <div class="md:p-6 p-4">
             <div class="float-left pr-3 pb-2">
               <lord-icon
               src="https://media.lordicon.com/icons/wired/lineal/245-edit-document.json"
@@ -101,13 +106,13 @@
                             style="width:40px;height:40px">
                         </lord-icon>
             </div>
-            The DOM <span class="text-2xl text-emerald-500">(Document Object Model)</span> is an API <span class="text-2xl text-emerald-500">(Application Programming Interface)</span> that represents and interacts with any HTML or XML-based markup language document. The DOM is a document model loaded in the browser and representing the document as a node tree, or DOM tree, where each node represents part of the document, it can be an element, text string, or comment.The DOM is one of the most-used APIs on the Web because it allows code running in a browser to access and interact with every node in the document. Nodes can be created, moved, and changed. Event listeners can be added to nodes and triggered on the occurrence of a given event. 
+            <p class="text-sm md:text-lg text-justify">
+              The DOM is an API that represents and interacts with any HTML or XML-based markup language document. The DOM is a document model loaded in the browser and representing the document as a node tree, or DOM tree, where each node represents part of the document, it can be an element, text string, or comment.The DOM is one of the most-used APIs on the Web because it allows code running in a browser to access and interact with every node in the document. Nodes can be created, moved, and changed. Event listeners can be added to nodes and triggered on the occurrence of a given event.
+            </p> 
           </div>
         </article>
         <article class="hide two">
-          <div class="p-6 space-y-2">
-            
-              There are many methods in Javascript to select an element, Each method has it's own way to select an element. like <br>
+          <div class="md:p-6 p-4">
               <div class="float-left pr-3 pb-2">
                 <lord-icon
                 src="https://media.lordicon.com/icons/wired/lineal/245-edit-document.json"
@@ -118,31 +123,33 @@
                               style="width:40px;height:40px">
                 </lord-icon>
               </div>
-               <p> <span class="text-2xl text-emerald-500">getElementById()</span>to get an Element by their unique ID</p>
-               <p><span class="text-2xl text-emerald-500">getElementByClassName()</span> to get an element by required class name</p>
-               <p><span class="text-2xl text-emerald-500">getElementsByTagName() </span> it finds the element by their tag name</p>
-               <p> <span class="text-2xl text-emerald-500">querySelector()</span> most common used method to find element, it can be either class-Selector or ID-selector</p>
+              <p class="text-sm md:text-lg text-justify">There are many methods in Javascript to select an element, Each method has it's own way to select an element. Such as
+               <span class="text-lg text-emerald-500">getElementById()</span>to get an Element by their unique ID
+               <span class="text-lg text-emerald-500">getElementByClassName()</span> to get an element by required class name
+               <span class="text-lg text-emerald-500">getElementsByTagName() </span> it finds the element by their tag name
+                <span class="text-lg text-emerald-500">querySelector()</span> most common used method to find element, it can be either class-Selector or ID-selector</p>
           </div>
         </article>
         <article class="hide three">
-          <div class=" pr-3 pb-2">
-            <p class="">
+          <div class="md:p-6 p-4">
+            <div class="float-left pr-3 pb-2">
               <lord-icon
-                src="https://media.lordicon.com/icons/wired/lineal/245-edit-document.json"
-                              trigger="loop"
-                              stroke="light"
-                              state="hover-roll"
-                              colors="primary:#000,secondary:#fffdd"
-                              style="width:40px;height:40px">
-                </lord-icon>
+              src="https://media.lordicon.com/icons/wired/lineal/245-edit-document.json"
+                            trigger="loop"
+                            stroke="light"
+                            state="hover-roll"
+                            colors="primary:#000,secondary:#fffdd"
+                            style="width:40px;height:40px">
+              </lord-icon>
+            </div>
+                <p class="text-sm md:text-xl text-justify">
               Event delegation is an way in JavaScript that helps us to handle events at the top level in the Nodes, instead of adding event handlers to every child nodes, It gives us access of all children, by attaching a single event listener on a parent element. its the advantage of event bubbling, where events propagate up from the target element to the parent elements in DOM.
             </p> 
           </div>
         </article>
         <article class=" hide four">
-          <div class="p-6">
-            <p>
-              <p class="float-left">
+          <div class="md:p-6 p-4">
+              <div class="float-left pr-3 pb-2">
                 <lord-icon
                 src="https://media.lordicon.com/icons/wired/lineal/245-edit-document.json"
                               trigger="loop"
@@ -151,11 +158,15 @@
                               colors="primary:#000,secondary:#fffdd"
                               style="width:40px;height:40px">
                 </lord-icon>
-              </p>
+              </div>
+              <p class="text-sm md:text-xl text-justify">
               Manipulating an element by it attributes and styling it can be easier in JavaScript, Cause there are bunch of options.We can get, set, add, or remove attributes using built-in JavaScript methods like 
-            <br> getAttribute(), <small class="text-red-600 text-lg">document.getElementsByTagName('img')[0].getAttribute('src')</small>.
-            <br>setAttribute(), <small class="text-red-600 text-lg">document.getElementsByTagName('img')[0].setAttribute('src',"./assets/feni.png")</small>;
-            <br> removeAttribute(), <small class="text-red-600 text-lg">document.getElementsByTagName('img')[0].removeAttribute('disabled')</small>;
+              getAttribute(), 
+              getAttribute('src'),
+              setAttribute(),
+              setAttribute('src',"./location"),
+              removeAttribute(),
+              removeAttribute('disabled');
             </p>
             
           </div>
