@@ -42,11 +42,11 @@
 <body>
 
         <!--! Modal starts-->
-        <div class="overlay absolute top-0 right-0 bottom-0 left-0 bg-[#191918c1] w-full h-full hidden"></div>
-        <section class="fixed bg-gray-100 rounded-xl top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] z-40 p-5 min-w-[30vw] shadow-xl text-center space-y-5 hidden">
-            <h1 class="text-4xl italic font-bold">Congrats!</h1>
+        <div class="overlay absolute top-0 right-0 bottom-0 left-0 bg-[#191918c1] w-full h-full z-20 hidden"></div>
+        <section class="myModal fixed bg-gray-100 rounded-xl top-[50%] left-[50%] z-20 -translate-x-[50%] -translate-y-[50%] p-5 min-w-[30vw] shadow-xl text-center space-y-5 hidden">
+            <h1 class="text-4xl italic font-bold modalHeading">Congrats!</h1>
         <p>
-            <lord-icon
+                        <lord-icon
                             src="https://media.lordicon.com/icons/wired/lineal/291-coin-dollar.json"
                             trigger="loop"
                             stroke="light"
@@ -55,14 +55,14 @@
                             style="width:100px;height:100px">
                         </lord-icon>
         </p>
-        <p class="font-bold text-gray-700 whitespace-nowrap">You have donated for Humankind</p>
-        <p class="text-green-500 text-2xl font-semibold">Successfully</p>
-        <button class="btn__primary whitespace-nowrap">Close Confirmation</button>
+        <p class="font-bold text-gray-700 whitespace-nowrap modalHint">You have donated for Humankind</p>
+        <p class="text-green-500 text-2xl font-semibold success">Successfully</p>
+        <button class="btn__primary whitespace-nowrap modalClose">Close Confirmation</button>
         </section>
     
     <!--! Modal Ends-->
 
-    <header class="fixed left-0 right-0 z-20 bg-gradient-to-b from-[#bcc1c3f4]">
+    <header class="fixed left-0 right-0 z-10 bg-gradient-to-b from-[#bcc1c3f4]">
             <!--! nav Starts -->
         <div class="py-4">
             <nav class="grid grid-cols-3 gap-10 md:w-9/12 w-full mx-auto">
@@ -108,7 +108,7 @@
         <!-- ! Donation Catagories starts-->
          <div class="card_container">
             <section class="donation_card_container flex flex-col gap-5">
-                <section class="dontaion__cardOne flex min-h-6 flex-col  lg:flex-row lg:w-10/12 mx-auto p-4 rounded-xl border-gray-200 border-[1px] gap-5">
+                <section class="donation__cardOne flex min-h-6 flex-col  lg:flex-row lg:w-10/12 mx-auto p-4 rounded-xl border-gray-200 border-[1px] gap-5">
                     <figure class="flex-1 bg-red-400 rounded-xl">
                         <div class="w-full h-full overflow-hidden rounded-xl">
                             <img src="./assets/noakhali.png" alt="flood in Noakhali" class="default_image">
@@ -128,14 +128,14 @@
                             <span class="font-bold">BDT</span>
                         </p>
                         <article class="flex flex-col justify-between h-full gap-6">
-                            <h4 class="md:text-2xl text-lg font-semibold text-gray-600">Donate for Flood at Noakhali, Bangladesh</h4>
+                            <h4 class="md:text-2xl text-lg font-semibold text-gray-600">Donate for <span>Flood at Noakhali, Bangladesh</span></h4>
                         <p class="des flex-1 line-clamp-6"> The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.The Noakhali Meteorological Office reported 174mm of rainfall in just 12 hours from Monday afternoon to early hours of Tuesday, contributing to the widespread flooding. The low-lying areas in Sadar, Senbagh, Sonaimuri, Chatkhil, Begumganj, Kabirhat, Companiganj, and Subarnachar upazilas have been hardest hit.</p>
                         <input class="default_input" type="text" name="donation" id="noakhali" placeholder="Enter Donation Amount">
                         <button class="btn__primary w-full h-[7vh] uppercase font-bold hover:text-white donateNoakhali">Donate Now</button>
                         </article>
                     </div>
                  </section>
-                <section class="dontaion__cardTwo flex min-h-6 flex-col  lg:flex-row lg:w-10/12 mx-auto p-4 rounded-xl border-gray-200 border-[1px] gap-5">
+                <section class="donation__cardTwo flex min-h-6 flex-col  lg:flex-row lg:w-10/12 mx-auto p-4 rounded-xl border-gray-200 border-[1px] gap-5">
                     <figure class="flex-1 bg-red-400 rounded-xl">
                         <div class="w-full h-full overflow-hidden rounded-xl">
                             <img src="./assets/feni.png" alt="flood in Feni" class="default_image">
@@ -151,18 +151,18 @@
                                 colors="primary:#000,secondary:#ffd700"
                                 style="width:30px;height:30px">
                             </lord-icon>
-                            <span id="donated_amount" class="text-gray-900 font-bold">0</span>
+                            <span id="donated_amount" class="text-gray-900 font-bold feni">0</span>
                             <span class="font-bold">BDT</span>
                         </p>
                         <article class="flex flex-col justify-between h-full gap-6">
-                            <h4 class="md:text-2xl text-lg font-semibold text-gray-600">Donate for Flood Relief in Feni,Bangladesh</h4>
+                            <h4 class="md:text-2xl text-lg font-semibold text-gray-600">Donate for <span>Flood Relief in Feni,Bangladesh</span></h4>
                         <p class="des flex-1 line-clamp-6"> The recent floods in Feni have devastated local communities, leading to severe disruption and loss. Your generous donation will help provide immediate aid, including food, clean water, and medical supplies, to those affected by this calamity. Together, we can offer crucial support and help rebuild lives in the aftermath of this disaster. Every contribution counts towards making a real difference. Please consider donating today to assist those in urgent need.</p>
                         <input class="default_input" type="text" name="donation" id="noakhali" placeholder="Enter Donation Amount">
                         <button class="btn__primary w-full h-[7vh] uppercase font-bold hover:text-white donateFeni">Donate Now</button>
                         </article>
                     </div>
                  </section>
-                <section class="dontaion__cardThree flex min-h-6 flex-col  lg:flex-row lg:w-10/12 mx-auto p-4 rounded-xl border-gray-200 border-[1px] gap-5">
+                <section class="donation__cardThree flex min-h-6 flex-col  lg:flex-row lg:w-10/12 mx-auto p-4 rounded-xl border-gray-200 border-[1px] gap-5">
                     <figure class="flex-1 bg-red-400 rounded-xl">
                         <div class="w-full h-full overflow-hidden rounded-xl">
                             <img src="./assets/quota-protest.png" alt="Quota movement 36th July 2024" class="default_image">
@@ -178,11 +178,11 @@
                                 colors="primary:#000,secondary:#ffd700"
                                 style="width:30px;height:30px">
                             </lord-icon>
-                            <span id="donated_amount" class="text-gray-900 font-bold">0</span>
+                            <span id="donated_amount" class="text-gray-900 font-bold quota">0</span>
                             <span class="font-bold">BDT</span>
                         </p>
                         <article class="flex flex-col justify-between h-full gap-6">
-                            <h4 class="md:text-2xl text-lg font-semibold text-gray-600">Aid for Injured in the Quota Movement</h4>
+                            <h4 class="md:text-2xl text-lg font-semibold text-gray-600">Aid for <span>Injured in the Quota Movement, Bangladesh</span></h4>
                         <p class="des flex-1 line-clamp-6"> The recent Quota movement has resulted in numerous injuries and significant hardship for many individuals. Your support is crucial in providing medical assistance, rehabilitation, and necessary supplies to those affected. By contributing, you help ensure that injured individuals receive the care and support they need during this challenging time. Every donation plays a vital role in alleviating their suffering and aiding in their recovery. Please consider making a donation to support these brave individuals in their time of need.</p>
                         <input class="default_input" type="text" name="donation" id="noakhali" placeholder="Enter Donation Amount">
                         <button class="btn__primary w-full h-[7vh] uppercase font-bold hover:text-white">Donate Now</button>
@@ -194,24 +194,22 @@
         <!-- ! Donation Catagories ends-->
 
         <!--! History of Donations Starts -->
-
-    <section class="history-container w-10/12 mx-auto h-[100vh] mt-10 flex flex-col gap-4">
-            <article class="record flex flex-col rounded-xl border-[1px] border-gray-200 px-10 py-5">
-                <p><span>00</span><span>Taka Donated to XYZ</span></p>
-                <p><span>Date:</span><span>Time</span><span>location</span></p>
-            </article>
-            <article class="record flex flex-col rounded-xl border-[1px] border-gray-200 px-10 py-5">
-                <p><span>00</span><span>Taka Donated to XYZ</span></p>
-                <p><span>Date:</span><span>Time</span><span>location</span></p>
-            </article>
-            <article class="record flex flex-col rounded-xl border-[1px] border-gray-200 px-10 py-5">
-                <p><span>00</span><span>Taka Donated to XYZ</span></p>
-                <p><span>Date:</span><span>Time</span><span>location</span></p>
-            </article>
-            <article class="record flex flex-col rounded-xl border-[1px] border-gray-200 px-10 py-5">
-                <p><span>00</span><span>Taka Donated to XYZ</span></p>
-                <p><span>Date:</span><span>Time</span><span>location</span></p>
-            </article>
+        <div></div>
+        <div class="h-[10vh]"></div>
+    <section class="history-container w-10/12 min-h-[100dvh] mx-auto space-y-5 hidden" autofocus>
+        <article class="noDonation text-red-400 text-center grid place-content-center mt-20">
+            <div class="flex justify-center items-center">
+                <lord-icon
+            src="https://media.lordicon.com/icons/wired/lineal/291-coin-dollar.json"
+                            trigger="loop"
+                            stroke="light"
+                            state="hover-roll"
+                            colors="primary:#000,secondary:#ffd700"
+                            style="width:150px;height:150px">
+                        </lord-icon>
+            </div>
+            <h1 class="text-7xl italic font-bold">Nothing Donated Yet!</h1>
+        </article>
     </section>
     <!--! History of Donations Ends -->
     </main>
@@ -219,15 +217,3 @@
     <footer></footer>
 </body>
 </html>
-
-
-<!-- <script src="https://cdn.lordicon.com/lordicon.js"></script>
-
-<lord-icon
-    src="https://cdn.lordicon.com/fttvwdlw.json"
-    trigger="loop"
-    stroke="light"
-    state="hover-roll"
-    colors="primary:#3080e8,secondary:#b4b4b4"
-    style="width:250px;height:250px">
-</lord-icon> -->
