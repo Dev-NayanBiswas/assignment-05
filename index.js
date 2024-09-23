@@ -126,6 +126,13 @@ function updateHistory(msg){
 
 
 function activeHistory(){
+    document.querySelector('#donate').classList.remove('bg-lime-600')
+    document.querySelector('#donate').classList.add('bg-green-50')
+    document.querySelector('#donate').classList.remove('text-gray-200')
+
+
+    document.querySelector('#history').classList.add('bg-lime-600')
+    document.querySelector('#history').classList.add('text-gray-200')
     const history = document.querySelector('.history-container');
 
     if(history.childElementCount > 1){
@@ -139,6 +146,12 @@ function activeHistory(){
 }
 
 function activeDonation(){
+    document.querySelector('#donate').classList.add('bg-lime-600')
+    document.querySelector('#donate').classList.add('text-gray-200')
+
+    
+    document.querySelector('#history').classList.remove('bg-lime-600')
+    document.querySelector('#history').classList.remove('text-gray-200')
     history.classList.add('hidden');
     donation.classList.remove('hidden')
 }

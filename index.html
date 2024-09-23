@@ -26,9 +26,13 @@
           .record:nth-child(even){
             @apply bg-gray-50
           }
+
+          
           .btn__primary{
-            @apply py-3 px-10 bg-[#b4f461d9] text-gray-800 font-semibold tracking-wide rounded-md hover:text-gray-100 focus:text-gray-100 focus:bg-lime-600 focus:outline-none hover:bg-lime-600 active:scale-95 active:translate-x-[2px] active:translate-y-[2px] transition-all duration-300
+            @apply py-3 px-10 outline-none text-gray-700 hover:text-gray-200 hover:bg-lime-600 focus:ring-0 font-semibold tracking-wide rounded-md focus:outline-none  focus:bg-lime-600 active:scale-95 active:translate-x-[2px] active:translate-y-[2px] transition-all duration-300 
           }
+
+          
           .default_image{
             @apply w-full h-full object-cover object-center hover:scale-105 transition-all duration-300 
           }
@@ -61,7 +65,7 @@
         </p>
         <p class="font-bold text-gray-700 whitespace-nowrap modalHint">You have donated for Humankind</p>
         <p class="text-green-500 text-2xl font-semibold success">Successfully</p>
-        <button class="btn__primary whitespace-nowrap modalClose">Close Confirmation</button>
+        <button class="btn__primary whitespace-nowrap modalClose bg-[#b4f461d9]">Close Confirmation</button>
         </section>
     
     <!--! Modal Ends-->
@@ -71,7 +75,7 @@
         <div class="py-4">
             <nav class="grid grid-cols-3 gap-10 md:w-9/12 w-full mx-auto">
                 <div class="navPartOne flex items-center md:pl-0 pl-2">
-                    <button class="btn__primary" onclick="window.location.href='./blog.html'">Blog</button>
+                    <button class="btn__primary bg-[#b4f461d9]" onclick="window.location.href='./blog.html'">Blog</button>
                 </div>
                 <div class="navPartTwo flex gap-3 items-center justify-center col-span-3 row-start-1 md:col-span-1 md:col-start-2">
                     <img src="./assets/logo.png" alt="">
@@ -101,8 +105,8 @@
         <!-- !Button Donation And History starts-->
         <div class="text-center flex gap-5 justify-center z-10 min-h-20 mx-auto">
             <div class="self-center space-x-3">
-                <button class="btn__primary bg-green-50 border-gray-200 border-[1px] " id="donate" autofocus>Donation</button>
-            <button class="btn__primary bg-green-50 border-gray-200 border-[1px] " id="history">History</button>
+                <button class="btn__primary bg-lime-600 text-gray-200" id="donate">Donation</button>
+            <button class="btn__primary bg-green-50" id="history">History</button>
             </div>
         </div>
         <!-- !Button Donation And History Ends-->
@@ -139,7 +143,7 @@
                             <h4 class="md:text-3xl text-xl font-semibold text-gray-600">Donate for <span>Flood at Noakhali, Bangladesh</span></h4>
                         <p class="des flex-1 line-clamp-6 grid place-content-center text-justify"> The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.The Noakhali Meteorological Office reported 174mm of rainfall in just 12 hours from Monday afternoon to early hours of Tuesday, contributing to the widespread flooding. The low-lying areas in Sadar, Senbagh, Sonaimuri, Chatkhil, Begumganj, Kabirhat, Companiganj, and Subarnachar upazilas have been hardest hit.</p>
                         <input class="default_input md:py-5" type="text" name="donation" id="noakhali" placeholder="Enter Donation Amount">
-                        <button class="btn__primary w-full md:py-5 uppercase font-bold hover:text-white donateNoakhali">Donate Now</button>
+                        <button class="btn__primary w-full md:py-5 uppercase font-bold hover:text-white donateNoakhali bg-[#b4f461d9]">Donate Now</button>
                         </article>
                     </div>
                  </section>
@@ -166,7 +170,7 @@
                             <h4 class="md:text-3xl text-xl font-semibold text-gray-600">Donate for <span>Flood Relief in Feni,Bangladesh</span></h4>
                         <p class="des flex-1 line-clamp-6 grid place-content-center text-justify"> The recent floods in Feni have devastated local communities, leading to severe disruption and loss. Your generous donation will help provide immediate aid, including food, clean water, and medical supplies, to those affected by this calamity. Together, we can offer crucial support and help rebuild lives in the aftermath of this disaster. Every contribution counts towards making a real difference. Please consider donating today to assist those in urgent need. We are actively working to provide relief, distributing food, medicine, and rebuilding efforts. Donations are crucial to help provide essential supplies and support long-term rehabilitation efforts for the affected communities</p>
                         <input class="default_input md:py-5" type="text" name="donation" id="noakhali" placeholder="Enter Donation Amount">
-                        <button class="btn__primary w-full md:py-5 uppercase font-bold hover:text-white donateFeni">Donate Now</button>
+                        <button class="btn__primary w-full md:py-5 uppercase font-bold hover:text-white donateFeni bg-[#b4f461d9]">Donate Now</button>
                         </article>
                     </div>
                  </section>
@@ -193,7 +197,7 @@
                             <h4 class="md:text-3xl text-xl font-semibold text-gray-600">Aid for <span>Injured in the Quota Movement, Bangladesh</span></h4>
                         <p class="des flex-1 grid place-content-center text-justify line-clamp-6"> The recent Quota movement has resulted in numerous injuries and significant hardship for many individuals. Your support is crucial in providing medical assistance, rehabilitation, and necessary supplies to those affected. By contributing, you help ensure that injured individuals receive the care and support they need during this challenging time. Every donation plays a vital role in alleviating their suffering and aiding in their recovery. Please consider making a donation to support these brave individuals in their time of need.To assist the families of victims, providing both immediate relief and longer-term support.We accept donations online, and you funds is directed towards medical assistance, legal defense, and basic necessities for those displaced by the violence.​</p>
                         <input class="default_input md:py-5" type="text" name="donation" id="noakhali" placeholder="Enter Donation Amount">
-                        <button class="btn__primary w-full md:py-5 uppercase font-bold hover:text-white">Donate Now</button>
+                        <button class="btn__primary w-full md:py-5 uppercase font-bold hover:text-white bg-[#b4f461d9]">Donate Now</button>
                         </article>
                     </div>
                  </section>
