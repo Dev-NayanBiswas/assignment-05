@@ -73,7 +73,7 @@ function global(e, name){
                 
             }else{
                 input.value = ''
-                activateModal('Exceed','insufficient Balance recharge or Try another amount','Try Again',recharge)
+                activateModal('Exceed !!','insufficient Balance recharge or Try another amount','Try Again',recharge)
                 return;
             }
         }else{
